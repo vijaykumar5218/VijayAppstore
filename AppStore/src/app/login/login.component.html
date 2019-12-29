@@ -1,0 +1,19 @@
+<div class="example-container">
+    <form [formGroup]="loginDetails">
+
+        Remove ::: {{loginDetails.value | json}}
+
+        <pre>
+        <mat-form-field>
+            <input matInput placeholder="Enter your email"  formControlName="emailId" type="email" required >        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput  formControlName="password" type="text" placeholder="Password">
+        </mat-form-field>
+    </pre>
+         
+
+        <button (click)="onLoginClick()">Login</button>
+        <button (click)="onCancelClick()">Cancel</button>
+    </form>
+</div>

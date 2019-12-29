@@ -1,0 +1,33 @@
+<h3>Register Model</h3>
+
+<div class="container">
+    <form [formGroup]="userDetails">
+
+        Remove ::: {{userDetails.value | json}}
+        
+        <div class="form-group col-sm-6">
+            <label for="firstname"> First Name:</label>
+            <input type="text" class="form-control" formControlName="firstName" name="firstname" />
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="firstname"> Last Name:</label>
+            <input type="text" class="form-control" formControlName="lastName" name="lastname" />
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="mobNum"> Mob Number:</label>
+            <input type="number" class="form-control" formControlName="mobNum" name="mobNum" />
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="email"> Email:</label>
+            <input type="email" class="form-control" formControlName="email" name="email" />
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="password"> Password :</label>
+            <input type="password" class="form-control" formControlName="password" name="password" />
+        </div>
+        
+        <button (click)="onApply()" >Submit</button>
+    </form>
+
+</div>
